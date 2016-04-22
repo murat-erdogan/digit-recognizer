@@ -18,7 +18,7 @@ next(reader)
 for row in reader:
     test.append(np.array(np.int64(row)))
 
-knn = KNeighborsClassifier(n_neighbors=1)
+knn = KNeighborsClassifier(n_neighbors=3)
 knn = knn.fit(train, labels)
 out = knn.predict(test)
 np.savetxt('out.csv', out, delimiter=',', fmt='%s')
