@@ -30,4 +30,4 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=20, batch_size=200)
 scores = model.evaluate(X_test, y_test, verbose=0)
-print("Large CNN Error: %.2f%%" % (100-scores[1]*100))
+print("Error: %.2f%%" % (100-scores[1]*100))
